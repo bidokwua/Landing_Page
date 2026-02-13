@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Firefly - Autonomous Fire Protection for Your Home</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+<body class="bg-neutral-50 text-neutral-900 antialiased">
+
+    <!-- Emergency Alert Banner -->
+    <div class="bg-amber-500 text-neutral-900 py-3 text-center text-sm font-bold tracking-wide">
+        <span class="inline-flex items-center gap-2">
+            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                <path fill-rule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clip-rule="evenodd"/>
+            </svg>
+            Active fire warnings in your area. <a href="#rental-request" class="underline underline-offset-2 ml-2">Request emergency rental →</a>
+        </span>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="fixed top-12 left-0 right-0 z-50 flex justify-center py-4 px-6 bg-white/80 backdrop-blur-md border-b border-neutral-200/50">
+        <div class="w-full flex items-center justify-between max-w-7xl mx-auto">
+            <div class="flex items-center gap-8">
+                <a href="#" class="text-2xl font-display font-bold tracking-tight text-ember-600">Firefly</a>
+                <div class="hidden md:flex items-center gap-6 text-sm font-medium">
+                    <a href="#how-it-works" class="hover:text-ember-600 transition-colors">How It Works</a>
+                    <a href="#technology" class="hover:text-ember-600 transition-colors">Technology</a>
+                    <a href="#pricing" class="hover:text-ember-600 transition-colors">Pricing</a>
+                </div>
+            </div>
+            
+            <div class="flex items-center gap-4">
+                <a href="#rental-request" class="text-sm font-semibold hover:text-ember-600 transition-colors">Rental Request</a>
+                <button class="bg-ember-600 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-ember-700 transition-colors">
+                    Join Waitlist
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex flex-col pt-32">
+        <div class="relative z-10">
+            <!-- Background Image -->
+            <div class="absolute inset-0 z-0 w-full h-full">
+                <img src="https://images.unsplash.com/photo-1609806918173-23f9f7fa224b" 
+                     alt="California wildfire at sunset with home in foreground" 
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 bg-gradient-to-b from-neutral-900/40 via-transparent to-neutral-900/80"></div>
+            </div>
+
+            <!-- Hero Content -->
+            <main class="relative z-10 flex-1 flex flex-col justify-center px-6 lg:px-12 pt-20 pb-32">
+                <div class="max-w-3xl">
+                    <div class="inline-block bg-white/10 backdrop-blur-md border border-white/30 px-4 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white mb-8">
+                        Autonomous Fire Protection
+                    </div>
+
+                    <h1 class="font-display text-6xl md:text-8xl leading-[0.95] mb-10 tracking-tight text-white">
+                        Your home's guardian when you're not there
+                    </h1>
+
+                    <p class="text-xl md:text-2xl text-white/90 leading-relaxed mb-12 max-w-2xl font-light">
+                        Firefly autonomously patrols your property, detects fires and embers, and deploys intelligent suppression—protecting your home during evacuations when it's most vulnerable.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="bg-ember-600 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-ember-700 transition-colors">
+                            See How It Works
+                        </button>
+                        <button class="border-2 border-white text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-white/10 transition-colors">
+                            Request Rental
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Bottom Stats -->
+                <div class="mt-auto flex flex-col md:flex-row gap-12 md:gap-0 pt-20 border-t border-white/20">
+                    <div class="md:px-12 first:pl-0 md:border-r border-white/20">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">15-70 ft</div>
+                        <div class="text-base text-white/70 font-medium">Suppression range</div>
+                    </div>
+                    <div class="md:px-12 md:border-r border-white/20">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">3 methods</div>
+                        <div class="text-base text-white/70 font-medium">Fire suppression tech</div>
+                    </div>
+                    <div class="md:px-12 border-none">
+                        <div class="text-4xl md:text-5xl font-bold text-white mb-2">24/7</div>
+                        <div class="text-base text-white/70 font-medium">Autonomous patrol</div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-32 px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-7xl mb-6 tracking-tight">
+                    Protection is <span class="italic text-ember-600">automatic</span>
+                </h2>
+                <p class="text-xl text-neutral-600 font-medium max-w-2xl mx-auto">
+                    Firefly operates autonomously, requiring no human intervention during fire events
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 01 -->
+                <div class="bg-neutral-50 rounded-[40px] p-10 flex flex-col animate-on-scroll" style="animation-delay: 0.1s">
+                    <span class="text-ember-600 font-bold text-xl mb-6">01</span>
+                    <h3 class="font-display text-3xl md:text-4xl mb-4">Autonomous Patrol</h3>
+                    <p class="text-base text-neutral-600 mb-12 leading-relaxed">
+                        Firefly scans and maps your property's exterior, continuously monitoring for heat signatures and potential ignition sources.
+                    </p>
+                    
+                    <!-- Visual: Patrol Path -->
+                    <div class="w-full bg-white rounded-[32px] p-8 shadow-sm mt-auto">
+                        <svg class="w-full h-40" viewBox="0 0 200 160" fill="none">
+                            <!-- House outline -->
+                            <rect x="60" y="40" width="80" height="80" stroke="#E5E5E5" stroke-width="2" fill="#FAFAFA"/>
+                            <path d="M50 70 L100 30 L150 70" stroke="#E5E5E5" stroke-width="2" fill="none"/>
+                            
+                            <!-- Patrol path (dotted) -->
+                            <path d="M 30 60 Q 20 100 40 140 L 160 140 Q 180 100 170 60 L 30 60" 
+                                  stroke="#FF5722" stroke-width="2" stroke-dasharray="5 5" fill="none" opacity="0.6"/>
+                            
+                            <!-- Robot position -->
+                            <circle cx="40" cy="140" r="8" fill="#FF5722"/>
+                            <circle cx="40" cy="140" r="16" fill="#FF5722" opacity="0.2"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 02 -->
+                <div class="bg-neutral-50 rounded-[40px] p-10 flex flex-col animate-on-scroll" style="animation-delay: 0.2s">
+                    <span class="text-ember-600 font-bold text-xl mb-6">02</span>
+                    <h3 class="font-display text-3xl md:text-4xl mb-4">Fire Detection</h3>
+                    <p class="text-base text-neutral-600 mb-12 leading-relaxed">
+                        Advanced thermal sensors detect heat signatures, flames, and flying embers—identifying threats before they spread.
+                    </p>
+                    
+                    <!-- Visual: Heat Map -->
+                    <div class="w-full bg-gradient-to-br from-amber-100 to-ember-100 rounded-[32px] p-8 shadow-sm mt-auto relative overflow-hidden">
+                        <div class="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1 rounded-full text-xs font-bold text-ember-600">
+                            THREAT DETECTED
+                        </div>
+                        <svg class="w-full h-40" viewBox="0 0 200 160" fill="none">
+                            <!-- Heat zones -->
+                            <circle cx="150" cy="80" r="30" fill="#FF5722" opacity="0.3"/>
+                            <circle cx="150" cy="80" r="20" fill="#FF5722" opacity="0.5"/>
+                            <circle cx="150" cy="80" r="10" fill="#FF5722" opacity="0.8"/>
+                            
+                            <!-- Scanning lines -->
+                            <line x1="20" y1="80" x2="130" y2="80" stroke="#FF5722" stroke-width="2" stroke-dasharray="3 3"/>
+                            <circle cx="20" cy="80" r="6" fill="#FF5722"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <!-- Card 03 -->
+                <div class="bg-neutral-50 rounded-[40px] p-10 flex flex-col animate-on-scroll" style="animation-delay: 0.3s">
+                    <span class="text-ember-600 font-bold text-xl mb-6">03</span>
+                    <h3 class="font-display text-3xl md:text-4xl mb-4">Smart Suppression</h3>
+                    <p class="text-base text-neutral-600 mb-12 leading-relaxed">
+                        Deploys the optimal suppression method based on fire size and type: water, powder, or infrasound pressure waves.
+                    </p>
+                    
+                    <!-- Visual: Suppression Methods -->
+                    <div class="w-full space-y-4 mt-auto">
+                        <div class="bg-white rounded-[20px] p-4 flex items-center gap-4 shadow-sm">
+                            <div class="w-12 h-12 bg-blue-500 rounded-xl flex items-center justify-center text-white">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.5 2a.5.5 0 00-.5.5v15a.5.5 0 001 0V2.5a.5.5 0 00-.5-.5zm9 0a.5.5 0 00-.5.5v15a.5.5 0 001 0V2.5a.5.5 0 00-.5-.5zM8 4a.5.5 0 00-.5.5v11a.5.5 0 001 0v-11A.5.5 0 008 4zm4 0a.5.5 0 00-.5.5v11a.5.5 0 001 0v-11A.5.5 0 0012 4z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-800">Water</div>
+                                <div class="text-[10px] text-neutral-500">15-70 ft range</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-[20px] p-4 flex items-center gap-4 shadow-sm">
+                            <div class="w-12 h-12 bg-neutral-700 rounded-xl flex items-center justify-center text-white">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 2a8 8 0 100 16 8 8 0 000-16zM8 10a2 2 0 114 0 2 2 0 01-4 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-800">ABC Powder</div>
+                                <div class="text-[10px] text-neutral-500">9-15 ft range</div>
+                            </div>
+                        </div>
+                        <div class="bg-white rounded-[20px] p-4 flex items-center gap-4 shadow-sm">
+                            <div class="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center text-white">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M10 3.5a6.5 6.5 0 100 13 6.5 6.5 0 000-13zM2 10a8 8 0 1116 0 8 8 0 01-16 0z"/>
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="text-xs font-bold text-neutral-800">Infrasound</div>
+                                <div class="text-[10px] text-neutral-500">7-10 ft range</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="flex flex-col md:flex-row items-center justify-center gap-6 mt-20">
+                <button class="bg-ember-600 text-white px-12 py-5 rounded-full text-lg font-bold hover:bg-ember-700 transition-colors">
+                    Watch Demo Video
+                </button>
+                <button class="border-2 border-ember-600 text-ember-600 px-12 py-5 rounded-full text-lg font-bold hover:bg-ember-50 transition-colors">
+                    Download Tech Specs
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Deep Dive -->
+    <section id="technology" class="py-32 px-6 lg:px-12 bg-neutral-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-7xl mb-6 tracking-tight">
+                    Three suppression methods. <span class="italic text-ember-600">One intelligent system.</span>
+                </h2>
+                <p class="text-xl text-neutral-600 font-medium max-w-3xl mx-auto">
+                    Firefly automatically selects the optimal suppression technology based on fire size, distance, and environmental conditions
+                </p>
+            </div>
+
+            <!-- Suppression Range Visualization -->
+            <div class="bg-white rounded-[48px] p-12 md:p-20 mb-16 animate-on-scroll">
+                <div class="relative h-96 flex items-center justify-center">
+                    <!-- Range circles -->
+                    <div class="absolute inset-0 flex items-center justify-center">
+                        <div class="absolute w-96 h-96 rounded-full border-4 border-purple-200 opacity-30"></div>
+                        <div class="absolute w-72 h-72 rounded-full border-4 border-neutral-300 opacity-40"></div>
+                        <div class="absolute w-48 h-48 rounded-full border-4 border-blue-300 opacity-50"></div>
+                        
+                        <!-- Robot center -->
+                        <div class="absolute w-16 h-16 bg-ember-600 rounded-full flex items-center justify-center z-10">
+                            <svg class="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 20 20">
+                                <path d="M10 2a6 6 0 00-6 6v3.586l-.707.707A1 1 0 004 14h12a1 1 0 00.707-1.707L16 11.586V8a6 6 0 00-6-6z"/>
+                            </svg>
+                        </div>
+                    </div>
+                    
+                    <!-- Range labels -->
+                    <div class="absolute top-4 left-1/2 -translate-x-1/2 bg-purple-100 px-4 py-2 rounded-full text-xs font-bold text-purple-900">
+                        70 ft - Water (Extended)
+                    </div>
+                    <div class="absolute top-20 left-1/2 -translate-x-1/2 bg-neutral-100 px-4 py-2 rounded-full text-xs font-bold text-neutral-900">
+                        15 ft - ABC Powder
+                    </div>
+                    <div class="absolute top-36 left-1/2 -translate-x-1/2 bg-blue-100 px-4 py-2 rounded-full text-xs font-bold text-blue-900">
+                        10 ft - Infrasound
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Autonomous Navigation -->
+                <div class="bg-white rounded-[40px] p-10 animate-on-scroll">
+                    <div class="w-16 h-16 bg-ember-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-ember-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl mb-4">Autonomous Navigation</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-6">
+                        Firefly maps your property's exterior layout, identifying obstacles, pathways, and optimal patrol routes. Operates on any terrain including grass, gravel, and concrete.
+                    </p>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>360° environment mapping</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Obstacle avoidance and adaptive routing</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Multi-terrain mobility system</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Heat Detection -->
+                <div class="bg-white rounded-[40px] p-10 animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="w-16 h-16 bg-amber-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-amber-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M12.395 2.553a1 1 0 00-1.45-.385c-.345.23-.614.558-.822.88-.214.33-.403.713-.57 1.116-.334.804-.614 1.768-.84 2.734a31.365 31.365 0 00-.613 3.58 2.64 2.64 0 01-.945-1.067c-.328-.68-.398-1.534-.398-2.654A1 1 0 005.05 6.05 6.981 6.981 0 003 11a7 7 0 1011.95-4.95c-.592-.591-.98-.985-1.348-1.467-.363-.476-.724-1.063-1.207-2.03zM12.12 15.12A3 3 0 017 13s.879.5 2.5.5c0-1 .5-4 1.25-4.5.5 1 .786 1.293 1.371 1.879A2.99 2.99 0 0113 13a2.99 2.99 0 01-.879 2.121z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl mb-4">Thermal Detection System</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-6">
+                        Advanced thermal imaging detects heat signatures from flames, embers, and ignition sources before they become uncontrollable fires.
+                    </p>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Detects heat signatures from 50+ feet</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Identifies flying embers and spot fires</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Real-time threat assessment and prioritization</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Decision Intelligence -->
+                <div class="bg-white rounded-[40px] p-10 animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/>
+                            <path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm9.707 5.707a1 1 0 00-1.414-1.414L9 12.586l-1.293-1.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl mb-4">Intelligent Decision System</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-6">
+                        AI-powered logic selects the optimal suppression method based on fire characteristics, environmental factors, and safety protocols.
+                    </p>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Analyzes fire size, type, and spread rate</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Adapts strategy based on wind and weather</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Multi-threat prioritization and sequencing</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Mobile App -->
+                <div class="bg-white rounded-[40px] p-10 animate-on-scroll" style="animation-delay: 0.3s">
+                    <div class="w-16 h-16 bg-purple-100 rounded-2xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-purple-600" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-display text-2xl mb-4">Mobile Monitoring</h3>
+                    <p class="text-neutral-600 leading-relaxed mb-6">
+                        Receive real-time alerts, system status updates, and live notifications during fire events or evacuation orders directly to your phone.
+                    </p>
+                    <ul class="space-y-3 text-sm text-neutral-600">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Instant fire detection alerts</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Live patrol status and battery monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span>Evacuation order notifications</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real-World Validation -->
+    <section class="py-32 px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-7xl mb-6 tracking-tight">
+                    Tested in real fire conditions. <span class="italic text-ember-600">Proven results.</span>
+                </h2>
+                <p class="text-xl text-neutral-600 font-medium max-w-3xl mx-auto">
+                    Firefly has been validated through controlled burn tests and pilot deployments in California communities
+                </p>
+            </div>
+
+            <!-- Stats Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+                <div class="bg-neutral-50 rounded-[32px] p-10 text-center animate-on-scroll">
+                    <div class="text-6xl font-bold text-ember-600 mb-4">95%</div>
+                    <div class="text-lg font-semibold text-neutral-900 mb-2">Detection Success</div>
+                    <div class="text-sm text-neutral-600">In controlled burn scenarios with embers and small fires</div>
+                </div>
+                <div class="bg-neutral-50 rounded-[32px] p-10 text-center animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="text-6xl font-bold text-ember-600 mb-4">&lt;45s</div>
+                    <div class="text-lg font-semibold text-neutral-900 mb-2">Response Time</div>
+                    <div class="text-sm text-neutral-600">From detection to suppression deployment</div>
+                </div>
+                <div class="bg-neutral-50 rounded-[32px] p-10 text-center animate-on-scroll" style="animation-delay: 0.2s">
+                    <div class="text-6xl font-bold text-ember-600 mb-4">50+</div>
+                    <div class="text-lg font-semibold text-neutral-900 mb-2">Pilot Homes</div>
+                    <div class="text-sm text-neutral-600">Active deployments in high-risk California regions</div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div class="bg-neutral-50 rounded-[40px] p-10 animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_12fee524d-1763299187815.png" alt="California homeowner testimonial portrait" class="w-16 h-16 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-lg">Michael Chen</div>
+                            <div class="text-sm text-neutral-600">Paradise, CA</div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-700 leading-relaxed italic mb-4">
+                        "After the Camp Fire destroyed our first home, we rebuilt with every fire protection measure available. Firefly gives us the peace of mind that even when we evacuate, our home has active protection."
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-500">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+
+                <div class="bg-neutral-50 rounded-[40px] p-10 animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="flex items-center gap-4 mb-6">
+                        <img src="https://img.rocket.new/generatedImages/rocket_gen_img_1bcd6bd94-1763301248486.png" alt="Property manager testimonial portrait" class="w-16 h-16 rounded-full object-cover">
+                        <div>
+                            <div class="font-bold text-lg">Sarah Martinez</div>
+                            <div class="text-sm text-neutral-600">Property Manager, San Diego</div>
+                        </div>
+                    </div>
+                    <p class="text-neutral-700 leading-relaxed italic mb-4">
+                        "Managing properties in fire zones means constant worry during fire season. Firefly provides 24/7 protection that traditional systems simply can't match. Our insurance company even offered a premium reduction."
+                    </p>
+                    <div class="flex items-center gap-2 text-amber-500">
+                        <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison Section -->
+    <section class="py-32 px-6 lg:px-12 bg-neutral-50">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-20 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-7xl mb-6 tracking-tight">
+                    <span class="italic text-ember-600">Not your average</span> fire protection
+                </h2>
+            </div>
+
+            <div class="bg-white rounded-[48px] overflow-hidden">
+                <!-- Header -->
+                <div class="grid grid-cols-12 border-b border-neutral-200">
+                    <div class="col-span-6 p-8"></div>
+                    <div class="col-span-3 bg-ember-600 rounded-t-[32px] mt-[-20px] pt-[44px] pb-8 px-8 flex items-center justify-center text-white">
+                        <span class="text-xl font-bold tracking-tight">Firefly</span>
+                    </div>
+                    <div class="col-span-3 p-8 flex items-center justify-center text-sm font-bold text-neutral-400 uppercase tracking-widest">
+                        Traditional
+                    </div>
+                </div>
+
+                <!-- Rows -->
+                <div class="divide-y divide-neutral-200">
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Mobile & autonomous</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <div class="col-span-3 p-8 flex items-center justify-center opacity-20">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Works during evacuation</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <div class="col-span-3 p-8 flex items-center justify-center opacity-20">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Multiple suppression methods</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white text-2xl font-bold">3</div>
+                        <div class="col-span-3 p-8 flex items-center justify-center text-xl font-bold text-neutral-400">1</div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Heat signature detection</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <div class="col-span-3 p-8 flex items-center justify-center opacity-20">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">No construction required</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <div class="col-span-3 p-8 flex items-center justify-center opacity-20">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Real-time mobile alerts</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white">
+                            <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                        </div>
+                        <div class="col-span-3 p-8 flex items-center justify-center opacity-20">
+                            <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8 text-lg font-medium text-neutral-800">Estimated cost</div>
+                        <div class="col-span-3 bg-ember-600 p-8 flex items-center justify-center text-white text-2xl font-bold">$1,500</div>
+                        <div class="col-span-3 p-8 flex items-center justify-center text-xl font-bold text-neutral-400">$2,000-$5,000</div>
+                    </div>
+
+                    <div class="grid grid-cols-12 items-center">
+                        <div class="col-span-6 p-8"></div>
+                        <div class="col-span-3 bg-ember-600/60 h-20 rounded-b-[48px]"></div>
+                        <div class="col-span-3 p-8"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-32 px-6 lg:px-12 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center mb-16 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-7xl mb-6 tracking-tight">
+                    Protection that <span class="italic text-ember-600">fits your budget</span>
+                </h2>
+                <p class="text-xl text-neutral-600 font-medium">Affordable compared to traditional sprinkler systems</p>
+            </div>
+
+            <!-- Pricing Cards -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-20">
+                <!-- Hardware Purchase -->
+                <div class="bg-neutral-50 rounded-[48px] p-10 md:p-12 flex flex-col animate-on-scroll">
+                    <div class="flex items-center gap-2 text-ember-600 font-bold text-xs uppercase tracking-widest mb-6">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        One-Time Purchase
+                    </div>
+                    <h3 class="font-display text-4xl mb-8">Firefly Robot</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-2">
+                            <span class="text-7xl font-light tracking-tighter">$1,500</span>
+                        </div>
+                        <p class="text-sm font-bold text-neutral-500 uppercase tracking-widest mt-4">Hardware + Setup</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium text-neutral-700">Complete Firefly robot system</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium text-neutral-700">3 suppression methods included</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium text-neutral-700">Mobile app & monitoring</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium text-neutral-700">Property mapping & setup</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-ember-600 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium text-neutral-700">1-year hardware warranty</span>
+                        </li>
+                    </ul>
+
+                    <button class="bg-neutral-900 text-white px-10 py-4 rounded-full text-lg font-bold hover:bg-neutral-800 transition-colors mt-auto">
+                        Join Waitlist
+                    </button>
+                </div>
+
+                <!-- Priority Subscription -->
+                <div class="bg-ember-600 text-white rounded-[48px] p-10 md:p-12 flex flex-col relative overflow-hidden animate-on-scroll" style="animation-delay: 0.1s">
+                    <div class="absolute top-4 right-4 bg-amber-500 text-neutral-900 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                        Recommended
+                    </div>
+
+                    <div class="flex items-center gap-2 text-white/80 font-bold text-xs uppercase tracking-widest mb-6">
+                        <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                        </svg>
+                        Priority Subscription
+                    </div>
+                    <h3 class="font-display text-4xl mb-8">Priority Access</h3>
+                    
+                    <div class="mb-8">
+                        <div class="flex items-baseline gap-3 mb-2">
+                            <span class="text-7xl font-light tracking-tighter">$20</span>
+                            <span class="text-2xl font-light">/month</span>
+                        </div>
+                        <p class="text-sm font-medium text-white/70">or $216/year (10% savings)</p>
+                    </div>
+
+                    <ul class="space-y-4 mb-10">
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium"><strong>Guaranteed rental access</strong> during fire events</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium">Standard rental rate locked in</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium">Priority delivery during evacuations</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium">Software updates & diagnostics</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium">24/7 emergency support</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <svg class="w-5 h-5 text-white mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z"/>
+                            </svg>
+                            <span class="font-medium">Fire alert notifications</span>
+                        </li>
+                    </ul>
+
+                    <button class="bg-white text-ember-600 px-10 py-4 rounded-full text-lg font-bold hover:bg-neutral-100 transition-colors mt-auto">
+                        Subscribe Now
+                    </button>
+                </div>
+            </div>
+
+            <!-- Rental Information -->
+            <div class="max-w-3xl mx-auto bg-amber-50 border-2 border-amber-200 rounded-[32px] p-8 md:p-10 animate-on-scroll">
+                <div class="flex items-start gap-4 mb-6">
+                    <svg class="w-8 h-8 text-amber-600 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                        <path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-7-4a1 1 0 11-2 0 1 1 0 012 0zM9 9a1 1 0 000 2v3a1 1 0 001 1h1a1 1 0 100-2v-3a1 1 0 00-1-1H9z"/>
+                    </svg>
+                    <div>
+                        <h3 class="font-display text-2xl mb-3 text-neutral-900">Emergency Rental Program</h3>
+                        <p class="text-neutral-700 leading-relaxed mb-4">
+                            Don't own a Firefly? You can still rent one during active fire events. Priority subscribers get guaranteed access at standard rates, while non-subscribers may rent at premium rates based on availability.
+                        </p>
+                        <a href="#rental-request" class="inline-flex items-center gap-2 text-ember-600 font-bold hover:gap-3 transition-all">
+                            Request Emergency Rental
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10.293 5.293a1 1 0 011.414 0l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414-1.414L12.586 11H5a1 1 0 110-2h7.586l-2.293-2.293a1 1 0 010-1.414z"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rental Request Section -->
+    <section id="rental-request" class="py-32 px-6 lg:px-12 bg-neutral-50">
+        <div class="max-w-3xl mx-auto">
+            <div class="text-center mb-12 animate-on-scroll">
+                <h2 class="font-display text-5xl md:text-6xl mb-6 tracking-tight">
+                    Request <span class="italic text-ember-600">Emergency Rental</span>
+                </h2>
+                <p class="text-lg text-neutral-600">
+                    Submit your rental request for immediate processing during active fire events
+                </p>
+            </div>
+
+            <form class="bg-white rounded-[40px] p-10 md:p-12 animate-on-scroll">
+                <!-- Address -->
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Property Address</label>
+                    <input type="text" placeholder="123 Main Street, City, CA 12345" 
+                           class="w-full px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-ember-600 transition-colors">
+                </div>
+
+                <!-- Contact Info -->
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+                    <div>
+                        <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Full Name</label>
+                        <input type="text" placeholder="John Smith" 
+                               class="w-full px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-ember-600 transition-colors">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Phone Number</label>
+                        <input type="tel" placeholder="(555) 123-4567" 
+                               class="w-full px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-ember-600 transition-colors">
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Email Address</label>
+                    <input type="email" placeholder="john@example.com" 
+                           class="w-full px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-ember-600 transition-colors">
+                </div>
+
+                <!-- Subscription Status -->
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Subscription Status</label>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <label class="flex items-center gap-3 px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl cursor-pointer hover:border-ember-600 transition-colors">
+                            <input type="radio" name="subscription" value="priority" class="w-5 h-5 text-ember-600">
+                            <span class="font-medium">Priority Subscriber</span>
+                        </label>
+                        <label class="flex items-center gap-3 px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl cursor-pointer hover:border-ember-600 transition-colors">
+                            <input type="radio" name="subscription" value="standard" class="w-5 h-5 text-ember-600">
+                            <span class="font-medium">Non-Subscriber</span>
+                        </label>
+                    </div>
+                </div>
+
+                <!-- Payment Method -->
+                <div class="mb-8">
+                    <label class="block text-sm font-bold text-neutral-900 mb-3 uppercase tracking-wider">Payment Method</label>
+                    <input type="text" placeholder="Credit card ending in 1234" 
+                           class="w-full px-6 py-4 bg-neutral-50 border-2 border-neutral-200 rounded-2xl text-neutral-900 placeholder:text-neutral-400 focus:outline-none focus:border-ember-600 transition-colors">
+                    <p class="text-xs text-neutral-500 mt-2">Payment will be processed upon rental confirmation</p>
+                </div>
+
+                <!-- Terms & Conditions -->
+                <div class="mb-8">
+                    <label class="flex items-start gap-4 cursor-pointer group">
+                        <input type="checkbox" class="w-6 h-6 text-ember-600 rounded border-2 border-neutral-300 mt-1">
+                        <span class="text-sm text-neutral-700 leading-relaxed">
+                            I agree to the <a href="#" class="text-ember-600 font-semibold hover:underline">Terms & Conditions</a> including rental rates, delivery protocols, and equipment care responsibilities. I understand that priority subscribers receive guaranteed access at standard rates, while non-subscribers are subject to availability and premium pricing during high-demand periods.
+                        </span>
+                    </label>
+                </div>
+
+                <!-- Submit -->
+                <button type="submit" class="w-full bg-ember-600 text-white px-10 py-5 rounded-full text-lg font-bold hover:bg-ember-700 transition-colors">
+                    Submit Rental Request
+                </button>
+
+                <p class="text-center text-sm text-neutral-500 mt-6">
+                    Emergency requests are processed within 2 hours during active fire events
+                </p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-neutral-900 text-white py-20 px-6 lg:px-12">
+        <div class="max-w-7xl mx-auto">
+            <!-- Top Footer -->
+            <div class="flex flex-col lg:flex-row justify-between gap-16 mb-16 pb-16 border-b border-white/10">
+                <!-- Brand -->
+                <div class="max-w-sm">
+                    <div class="text-3xl font-display font-bold mb-6 text-ember-500">Firefly</div>
+                    <p class="text-lg text-white/70 leading-relaxed mb-8">
+                        Autonomous fire protection for California homes. Active defense when you're not there.
+                    </p>
+                    <div class="flex gap-4">
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M24 4.557c-.883.351-1.832.587-2.822.705 1.016-.609 1.796-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-1.012-2.175-1.642-3.594-1.642-2.72 0-4.925 2.195-4.925 4.914 0 .384.045.758.127 1.117-4.093-.205-7.723-2.165-10.151-5.144-.424.722-.666 1.561-.666 2.457 0 1.694.87 3.192 2.188 4.075-.807-.026-1.566-.248-2.228-.616v.061c0 2.385 1.693 4.374 3.946 4.827-.413.111-.849.171-1.296.171-.314 0-.615-.03-.916-.086.631 1.953 2.445 3.377 4.604 3.417-1.68 1.319-3.809 2.105-6.102 2.105-.39 0-.779-.023-1.17-.067 2.189 1.394 4.768 2.209 7.557 2.209 9.054 0 13.999-7.496 13.999-13.986 0-.209 0-.42-.015-.63 1.033-.67 1.923-1.512 2.622-2.482z"/></svg>
+                        </a>
+                        <a href="#" class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center hover:bg-white/20 transition-colors">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Links -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-12">
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Product</div>
+                        <div class="space-y-4">
+                            <a href="#how-it-works" class="block text-white/70 hover:text-white transition-colors">How It Works</a>
+                            <a href="#technology" class="block text-white/70 hover:text-white transition-colors">Technology</a>
+                            <a href="#pricing" class="block text-white/70 hover:text-white transition-colors">Pricing</a>
+                            <a href="#rental-request" class="block text-white/70 hover:text-white transition-colors">Rental Request</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Company</div>
+                        <div class="space-y-4">
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">About</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Pilot Program</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Press</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Careers</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Support</div>
+                        <div class="space-y-4">
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Help Center</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Safety Guidelines</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Contact</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Emergency: 911</a>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="text-xs font-bold uppercase tracking-widest text-white/40 mb-6">Legal</div>
+                        <div class="space-y-4">
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Terms of Service</a>
+                            <a href="#" class="block text-white/70 hover:text-white transition-colors">Rental Agreement</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bottom Footer -->
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6 text-sm text-white/50">
+                <div>© 2026 Firefly Fire Protection. All rights reserved.</div>
+                <div class="flex items-center gap-8">
+                    <span>Made in California</span>
+                    <span>•</span>
+                    <span>Patent Pending</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Animation Script -->
+    <script>
+        (function () {
+            const style = document.createElement("style");
+            style.textContent = `
+                .animate-on-scroll { 
+                    opacity: 0;
+                    transform: translateY(30px);
+                    filter: blur(8px);
+                }
+                .animate-on-scroll.animate { 
+                    animation: animationIn 1.2s ease-out forwards;
+                }
+                @keyframes animationIn {
+                    0% { opacity: 0; transform: translateY(30px); filter: blur(8px); }
+                    100% { opacity: 1; transform: translateY(0); filter: blur(0px); }
+                }
+            `;
+            document.head.appendChild(style);
+            
+            if (!window.__inViewIO) {
+                window.__inViewIO = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("animate");
+                            window.__inViewIO.unobserve(entry.target);
+                        }
+                    });
+                }, { threshold: 0.1, rootMargin: "0px 0px -10% 0px" });
+            }
+            
+            window.initInViewAnimations = function (selector = ".animate-on-scroll") {
+                document.querySelectorAll(selector).forEach((el) => window.__inViewIO.observe(el));
+            };
+            
+            document.addEventListener("DOMContentLoaded", () => {
+                initInViewAnimations();
+                
+                // Smooth scroll for anchor links
+                document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                    anchor.addEventListener('click', function (e) {
+                        const href = this.getAttribute('href');
+                        if (href !== '#') {
+                            e.preventDefault();
+                            const target = document.querySelector(href);
+                            if (target) {
+                                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                            }
+                        }
+                    });
+                });
+            });
+        })();
+    </script>
+</body>
+</html>
